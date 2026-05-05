@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generator Footer Text</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #0f172a;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .container {
+      background: #1e293b;
+      padding: 20px;
+      border-radius: 12px;
+      width: 90%;
+      max-width: 500px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+    input {
+      width: 100%;
+      padding: 10px;
+      border-radius: 8px;
+      border: none;
+      margin-bottom: 10px;
+    }
+    button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      background: #22c55e;
+      color: white;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    button:hover {
+      background: #16a34a;
+    }
+    .result {
+      margin-top: 20px;
+      padding: 15px;
+      background: #020617;
+      border-radius: 8px;
+      word-wrap: break-word;
+    }
+    .footer-link {
+      display: block;
+      margin-top: 10px;
+      color: #38bdf8;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Generator Footer Text</h2>
+  <input type="text" id="urlInput" placeholder="Masukkan URL...">
+  <button onclick="generateText()">Generate</button>
+
+  <div class="result" id="resultBox" style="display:none;">
+    <p id="generatedText"></p>
+    <a id="generatedLink" class="footer-link" target="_blank"></a>
+  </div>
+</div>
+
+<script>
+  const texts = [
+    "Jangan lewatkan kesempatan ini!",
+    "Klik link di bawah untuk info lengkap.",
+    "Solusi terbaik untuk kamu.",
+    "Mulai sekarang, ubah hidupmu.",
+    "Akses eksklusif hanya di sini.",
+    "Temukan rahasia sukses di sini.",
+    "Langkah kecil, hasil besar.",
+    "Kesempatan terbatas!",
+    "Jangan sampai ketinggalan.",
+    "Upgrade hidupmu sekarang.",
+    "Cara mudah hasil maksimal.",
+    "Mulai perjalanan suksesmu.",
+    "Satu klik menuju perubahan.",
+    "Info penting ada di sini.",
+    "Jangan ragu, coba sekarang.",
+    "Waktunya bertindak!",
+    "Solusi praktis untuk kamu.",
+    "Klik sekarang juga.",
+    "Rahasia ada di link ini.",
+    "Langsung cek di sini."
+  ];
+
+  function generateText() {
+    const url = document.getElementById("urlInput").value.trim();
+    if (!url) {
+      alert("Masukkan URL dulu!");
+      return;
+    }
+
+    const randomText = texts[Math.floor(Math.random() * texts.length)];
+
+    document.getElementById("generatedText").innerText = randomText;
+    document.getElementById("generatedLink").innerText = url;
+    document.getElementById("generatedLink").href = url;
+
+    document.getElementById("resultBox").style.display = "block";
+  }
+</script>
+
+</body>
+</html>
