@@ -9,39 +9,51 @@
       font-family: Arial, sans-serif;
       background: #0f172a;
       color: white;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
       margin: 0;
+      padding: 20px;
     }
     .container {
+      max-width: 600px;
+      margin: auto;
       background: #1e293b;
       padding: 20px;
       border-radius: 12px;
-      width: 90%;
-      max-width: 500px;
-      text-align: center;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
     }
-    input {
+    h2 {
+      text-align: center;
+    }
+    input[type="text"] {
       width: 100%;
       padding: 10px;
       border-radius: 8px;
       border: none;
-      margin-bottom: 10px;
+      margin-bottom: 15px;
     }
     button {
-      padding: 10px 20px;
+      padding: 10px;
+      width: 100%;
       border: none;
       border-radius: 8px;
       background: #22c55e;
       color: white;
-      cursor: pointer;
       font-weight: bold;
+      cursor: pointer;
+      margin-bottom: 15px;
     }
     button:hover {
       background: #16a34a;
+    }
+    .radio-group {
+      max-height: 200px;
+      overflow-y: auto;
+      background: #020617;
+      padding: 10px;
+      border-radius: 8px;
+    }
+    label {
+      display: block;
+      margin-bottom: 8px;
+      cursor: pointer;
     }
     .result {
       margin-top: 20px;
@@ -50,10 +62,10 @@
       border-radius: 8px;
       word-wrap: break-word;
     }
-    .footer-link {
+    a {
+      color: #38bdf8;
       display: block;
       margin-top: 10px;
-      color: #38bdf8;
     }
   </style>
 </head>
@@ -61,12 +73,17 @@
 
 <div class="container">
   <h2>Generator Footer Text</h2>
+
   <input type="text" id="urlInput" placeholder="Masukkan URL...">
-  <button onclick="generateText()">Generate</button>
+
+  <button onclick="generateRandom()">🎲 Generate Random</button>
+
+  <h3>Pilih Kalimat Manual:</h3>
+  <div class="radio-group" id="radioContainer"></div>
 
   <div class="result" id="resultBox" style="display:none;">
     <p id="generatedText"></p>
-    <a id="generatedLink" class="footer-link" target="_blank"></a>
+    <a id="generatedLink" target="_blank"></a>
   </div>
 </div>
 
@@ -94,7 +111,19 @@
     "Langsung cek di sini."
   ];
 
-  function generateText() {
+  const radioContainer = document.getElementById("radioContainer");
+
+  // Generate radio buttons
+  texts.forEach((text, index) => {
+    const label = document.createElement("label");
+    label.innerHTML = `
+      <input type="radio" name="textOption" value="${text}" onchange="generateFromRadio(this.value)">
+      ${text}
+    `;
+    radioContainer.appendChild(label);
+  });
+
+  function generateRandom() {
     const url = document.getElementById("urlInput").value.trim();
     if (!url) {
       alert("Masukkan URL dulu!");
@@ -102,11 +131,23 @@
     }
 
     const randomText = texts[Math.floor(Math.random() * texts.length)];
+    showResult(randomText, url);
+  }
 
-    document.getElementById("generatedText").innerText = randomText;
+  function generateFromRadio(selectedText) {
+    const url = document.getElementById("urlInput").value.trim();
+    if (!url) {
+      alert("Masukkan URL dulu!");
+      return;
+    }
+
+    showResult(selectedText, url);
+  }
+
+  function showResult(text, url) {
+    document.getElementById("generatedText").innerText = text;
     document.getElementById("generatedLink").innerText = url;
     document.getElementById("generatedLink").href = url;
-
     document.getElementById("resultBox").style.display = "block";
   }
 </script>
