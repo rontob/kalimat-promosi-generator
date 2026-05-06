@@ -79,7 +79,7 @@
 <body>
 
 <div class="container">
-  <h2>Kalimat Promosi Generator (Gratis)</h2>
+  <h2>Kalimat Promosi Generator</h2>
 <center><a href="https://youtu.be/-gKsFeip6s4" target="_blank" 
    style="color:yellow; font-style:italic; text-decoration:none;">
    🎬 tonton panduannya
@@ -591,7 +591,6 @@ GAJI : 160 Juta Setiap Bulan
 `ShortPro mengajak kamu untuk menjadi bagian dari pengalaman digital yang tidak hanya menghibur, tapi juga memberi manfaat tambahan.
 👉 Daftar sekarang:`,
 
-// ===== versi pendek (closing cepat) =====
 `Nonton drama pendek sekarang bisa jadi reward, cukup komentar 3 kali sehari di ShortPro.
 👉 Daftar sekarang:`,
 
@@ -626,101 +625,31 @@ GAJI : 160 Juta Setiap Bulan
 👉 Info & daftar:`,
 
 `Tanpa skill khusus, tanpa modal besar, cukup interaksi natural.
-👉 Join di sini:`
-];
+👉 Join di sini:`,
 
-  const radioContainer = document.getElementById("radioContainer");
+`🎬 Lagi butuh hiburan ringan?
+Coba deh nonton drama pendek di ShortPro
+Seru, cepat, nggak makan waktu 😌`,
 
-  // Generate radio buttons
-  texts.forEach((text) => {
-    const label = document.createElement("label");
-    label.innerHTML = `
-      <input type="radio" name="textOption" value="${text}" onchange="generateFromRadio(this.value)">
-      ${text}
-    `;
-    radioContainer.appendChild(label);
-  });
+`📱 Scroll terus tapi nggak nemu yang seru?
+Mungkin kamu belum coba ShortPro 😉`,
 
-  function generateRandom() {
-    const url = document.getElementById("urlInput").value.trim();
-    if (!url) {
-      alert("Masukkan URL dulu!");
-      return;
-    }
+`🎥 Nonton sebentar, lanjut kerja lagi
+Model hiburan kayak gini sih yang enak 😄
+Ada di ShortPro`,
 
-    const randomText = texts[Math.floor(Math.random() * texts.length)];
-    showResult(randomText, url);
-  }
+`😏 Awalnya cuma coba-coba
+Eh keterusan nonton drama pendek tiap hari
+Ternyata ada di ShortPro`,
 
-  function generateFromRadio(selectedText) {
-    const url = document.getElementById("urlInput").value.trim();
-    if (!url) {
-      alert("Masukkan URL dulu!");
-      return;
-    }
+`🔥 Drama pendek sekarang lagi naik banget
+Kalau belum coba ShortPro, kamu ketinggalan dikit sih 😄`,
 
-    showResult(selectedText, url);
-  }
+`🎬 Nggak perlu nonton lama-lama
+Beberapa menit aja udah dapet feel-nya
+Cobain di ShortPro`,
 
-  function showResult(text, url) {
-    const finalText = text + " " + url;
-    document.getElementById("resultText").value = finalText;
-    document.getElementById("resultBox").style.display = "block";
-  }
+`📲 Lagi nunggu? Lagi santai?
+Daripada gabut, mending buka ShortPro`,
 
-  function copyText() {
-    const textarea = document.getElementById("resultText");
-    textarea.select();
-    textarea.setSelectionRange(0, 99999);
-
-    document.execCommand("copy");
-
-    alert("Text berhasil di-copy!");
-  }
-</script>
-
-<p>
-<p>
-<p>
-<p>
-<p>
-<p>
-<center>
-<div style="position:relative; display:inline-block; margin:10px 0;">
-  
-  <a href="https://rontob.github.io/kalimat-promosi-generator/sawertrustpartner.jpg" target="_blank">
-    <img 
-      src="https://rontob.github.io/kalimat-promosi-generator/sawertrustpartner.jpg" 
-      alt="Partner"
-      style="width:120px; border-radius:8px; display:block;"
-    >
-    
-    <!-- Overlay text -->
-    <span style="
-      position:absolute;
-      top:50%;
-      left:50%;
-      transform:translate(-50%, -50%);
-      color:white;
-      font-size:12px;
-      font-weight:bold;
-      background:rgba(0,0,0,0.5);
-      padding:4px 8px;
-      border-radius:6px;
-    ">
-      ☕ buat beli kopi
-    </span>
-
-  </a>
-
-</div>
-<p>
-<p>
-<p>
-<p>
-<p>
-<p>
-  <div id="sfcea3q16yqd14btntbn45867knxc7djlxs"></div><script type="text/javascript" src="https://counter1.optistats.ovh/private/counter.js?c=ea3q16yqd14btntbn45867knxc7djlxs&down=async" async></script><noscript><a href="https://www.freecounterstat.com" title="website counter"><img src="https://counter1.optistats.ovh/private/freecounterstat.php?c=ea3q16yqd14btntbn45867knxc7djlxs" border="0" title="website counter" alt="website counter"></a></noscript>
-</center>
-</body>
-</html>
+`👀 Banyak yang diam-dia
