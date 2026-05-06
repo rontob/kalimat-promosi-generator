@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kalimat Promosi Generator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #0f172a;
+      color: white;
+      margin: 0;
+      padding: 20px;
+    }
+    .container {
+      max-width: 600px;
+      margin: auto;
+      background: #1e293b;
+      padding: 20px;
+      border-radius: 12px;
+    }
+    h2 {
+      text-align: center;
+    }
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      border-radius: 8px;
+      border: none;
+      margin-bottom: 15px;
+    }
+    button {
+      padding: 10px;
+      width: 100%;
+      border: none;
+      border-radius: 8px;
+      background: #22c55e;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      margin-bottom: 10px;
+    }
+    button:hover {
+      background: #16a34a;
+    }
+    .radio-group {
+      max-height: 200px;
+      overflow-y: auto;
+      background: #020617;
+      padding: 10px;
+      border-radius: 8px;
+    }
+    label {
+      display: block;
+      margin-bottom: 8px;
+      cursor: pointer;
+    }
+    .result {
+      margin-top: 20px;
+    }
+    textarea {
+      width: 100%;
+      height: 100px;
+      border-radius: 8px;
+      border: none;
+      padding: 10px;
+      resize: none;
+      background: #020617;
+      color: white;
+    }
+    .copy-btn {
+      background: #3b82f6;
+    }
+    .copy-btn:hover {
+      background: #2563eb;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Kalimat Promosi Generator</h2>
+<center><a href="https://youtu.be/-gKsFeip6s4" target="_blank" 
+   style="color:yellow; font-style:italic; text-decoration:none;">
+   🎬 tonton panduannya
+</a></center>
+<p>
+<p style="color:white; font-style:italic; text-decoration:none;">
+   masukkan URL/Link
+
+  <input type="text" id="urlInput" placeholder="https://sites.google.com/view/...">
+
+  <button onclick="generateRandom()">🎲 Pilih Secara Acak</button>
+
+  <h3>Pilih Kalimat Promosi:</h3>
+  <div class="radio-group" id="radioContainer"></div>
+
+  <div class="result" id="resultBox" style="display:none;">
+    <h3>Hasil:</h3>
+    <textarea id="resultText" readonly></textarea>
+    <button class="copy-btn" onclick="copyText()">📋 Copy</button>
+  </div>
+</div>
+
+<script>
+  const texts = [
+`🇸 🇭 🇴 🇷 🇹 🅿®️🅾
+▬▬▬▬▬▬▬▬▬▬▬▬▬
+
+*_Bisnis Jaringan Sosial Media_*
+-----------------------------------------------
+*_Platform hiburan drama pendek_*
+▬▬▬▬▬▬▬▬▬▬▬▬▬
+🇲 🇦 🇷 🇰 🇪 🇹 🇮 🇳 🇬 
+🄿🄻🄰🄽
+▬▬▬▬▬▬▬▬▬▬▬▬▬
+🅰️ *DEPOSIT*
+1️⃣ Dukung Drama
+▪️AI (Yang tersedia)
+• Modal = Rp.800.000,- ( 50 coin)
+• Kontrak = 1 bulan - 1 tahun
+• *Profit = 0,5%-3% / hari*
+
+⚠️ *Setelah kontrak habis, Modal dikembalikan*
+🅱️ *BONUS JARINGAN*
+1️⃣ Bonus Promosi
+Lv.    M  PSVIP   PSD    PD
+----+-----+---------+--------+-----
+1       0.     0.         0.       0.
+2        5   10%     10%   5%
+3      10   12%     12%   8%
+4      15   15%     15%  10%
+5      20   18%     18%  15%
+6      30   25%     25%  20%
+7      50   40%     35%  28%
+
+✨ Catatan Penting 📈 Semakin tinggi level, semakin besar:
+✅ Bonus
+✅ Rebate
+✅ Gaji bulanan
+✅ Dukungan drama
+
+🔥 Naik level = Naik penghasilan! 🔥
+
+2️⃣ *Bonus Rabat/profit sharing Sampai dengan 5 generasi*
+
+🔸 *Level 2*
+Generasi 1 = 10% 
+Generasi 2 sampai 5 = 5%
+---
+🔸*Level 3*
+Generasi 1 = 12% 
+Generasi 2 sampai 5 = 8%
+---
+🔸*Level 4*
+Generasi 1 = 15% 
+Generasi 2 sampai 5 = 10%
+---
+🔸*Level 5*
+Generasi 1 = 18% 
+Generasi 2 sampai 5 = 15%
+---
+🔸*Level 6* 
+Generasi 1 = 25% 
+Generasi 2 sampai 5 = 20%
+---
+🔸 *Level 7* 
+Generasi 1 = 35% 
+Generasi 2 sampai 5 = 28% 
+(Dari Profit Tugas Harian team)
+
+3️⃣ *Bonus Bulanan / Insentif Bulanan*
+
+Level 3 > 20 koin = 320 rb
+Level 4 > 50 koin =  800 rb
+Level 5 > 300 koin = 4.8 jt
+Level 6 > 2.000 koin = 32 jt
+Level 7 > 10.000 koin = 160 jt
+
+*Awal tahun Awal Memulai kesuksesan di ShortPro*
+
+*Yang belum join silakan di klik* 👇
+*Yok Gercep klik* ⤵️
+👉Sini:`,
+
+`*SHORTPRO: HIBURAN DIGITAL, BUKAN INVESTASI*
+
+_Apa itu ShortPro?_
+ShortPro adalah aplikasi hiburan drama pendek yang legal di Indonesia.
+Datang untuk menikmati konten, bukan untuk mimpi kaya mendadak.
+
+SISTEM KERJA (SANTAI TAPI JELAS)
+- Koin di ShortPro dibeli untuk hiburan, bukan untuk investasi.
+- Koin digunakan untuk mendukung drama pendek.
+- Ibarat nonton bioskop: yang dibayar adalah hiburannya, bukan beli saham filmnya.
+
+TENTANG BAGI HASIL (BIAR REALISTIS)
+- Ada bagi hasil dari traffic iklan.
+- Traffic bagus, bagi hasil ikut naik.
+- Traffic turun, bagi hasil ikut turun.
+- Dukungan bisa dipindahkan ke drama lain jika performa menurun.
+- Jika bagi hasil turun hingga 0,5%, modal dukungan dikembalikan sebagai sistem pengaman.
+
+KENAPA ADA LEVEL 2 SAMPAI LEVEL 7?
+Level bukan investasi.
+Level bukan jabatan.
+Level bukan jaminan kaya.
+
+Level 2–7 adalah reward prestasi, seperti di platform hiburan pada umumnya
+(TikTok, YouTube, dan sejenisnya).
+
+Fungsi level:
+- Menunjukkan keaktifan pengguna
+- Mengapresiasi kontribusi dan konsistensi
+- Menjadi simbol pengguna aktif dan berprestasi
+
+Ibarat game:
+Level naik karena aktif dan konsisten,
+bukan karena sekadar top up lalu ditinggal.
+
+KESIMPULAN
+ShortPro adalah platform hiburan berbasis traffic iklan.
+Level adalah bentuk apresiasi, bukan investasi.
+Hasil mengikuti performa konten, bukan janji tetap.
+
+Datang untuk hiburan,
+dukung dengan pemahaman,
+nikmati prosesnya tanpa halu.
+
+Sudahkah Anda Bergabung dengan Shortpro?! 😍👌
+
+👉Cek di sini:`,
+
+`🔮*Apakah bisnis konten drama pendek sedang naik tahun ini?*
+
+_*Jawaban: IYA, sedang mengalami peningkatan besar dan termasuk industri yang berkembang sangat cepat.*_
+
+*1. Tren Global*
+- Industri drama pendek (micro drama) tumbuh sangat pesat
+- Pertumbuhan diperkirakan di atas 30% per tahun
+- Nilai industri diprediksi mencapai miliaran dolar dalam beberapa tahun ke depan
+- Ini bukan tren sementara, tapi arah baru industri hiburan digital
+
+*2. Platform Besar Ikut Masuk*
+- TikTok mulai membuat konten drama sendiri
+- Perusahaan besar seperti Amazon dan Disney juga mulai melirik format ini
+- Ini tanda bahwa pasar dan uang sedang mengalir ke industri ini
+
+*3. Data Pengguna*
+- Video pendek menjadi mayoritas konsumsi konten internet
+- YouTube Shorts mencapai puluhan miliar views per hari
+- Pengguna lebih suka konten cepat, singkat, dan langsung ke inti
+
+*4. Perkembangan di Indonesia*
+- Download aplikasi drama pendek meningkat sangat tinggi (ratusan persen)
+- Pasar Indonesia masih dalam tahap berkembang (belum jenuh)
+- Banyak iklan muncul karena pemain baru sedang berebut pasar
+
+*5. Alasan Kenapa Meledak*
+- Pola konsumsi berubah (orang lebih suka yang cepat)
+- Konten mudah viral
+- Cerita dibuat singkat tapi bikin penasaran (hook kuat)
+- Bisa ditonton kapan saja tanpa komitmen lama
+
+*6. Model Bisnis*
+- Iklan (ads)
+- Sistem koin untuk membuka episode
+- Traffic dan distribusi konten
+- Sistem support user (bukan hanya kreator yang dapat uang)
+
+*7. Hal yang Perlu Diwaspadai*
+- Persaingan semakin ketat
+- Banyak platform yang overhype
+- Tidak semua platform bertahan lama
+- Harus benar-benar paham sistem sebelum terjun
+
+*Kesimpulan:*
+Bisnis drama pendek saat ini sedang naik pesat dan menjadi peluang besar di dunia digital. Namun tetap perlu selektif, memahami sistem, dan tidak hanya ikut tren agar tidak salah langkah.
+
+_Yuk Ah Gabung Bersama Shortpro ikut serta membangun ekosistem drama pendek agar bisa menambah penghasilan._
+
+*Cukup dengan mulai 50 koin dukung drama saja.*
+*Peluang penghasilan tambahan setia hari*😍😍😍
+
+👉Cek di sini: `,
+
+`⚛️ *SELAMAT PETANG TEMAN" TEAM HEBAT* 🌱✨
+💫Teman" smua saya mau share info apa yg saya pahami dn pelajari ttg monetisasi karena kita semua ada di shortpro ⤵️
+
+*Kadang kita bertanya…*
+*sebenarnya dari* *mana sih uang itu datang di dunia digital ? Seperti juga shortpro ini ?*
+⤵️
+
+👉🏿*JAWABANNHA ADALAH MONETISASI* 
+
+💫Monetisasi itu artinya mengubah perhatian banyak orang menjadi penghasilan.
+
+Coba kita lihat platform besar yg lbh dulu hadir seperti
+👉🏿 TikTok,
+👉🏿 YouTube, dan
+👉🏿 Instagram.
+
+Mereka bisa menghasilkan uang bukan karena menjual barang,
+tetapi karena jutaan orang datang menonton setiap hari.
+*BEGITU JUGA SHORTPRO*
+
+💫Dari situlah muncul:
+
+👉🏿 Iklan
+👉🏿 Promosi brand
+👉🏿 Kerja sama perusahaan
+
+💫Jadi sebenarnya yang mahal di era digital adalah *perhatian manusia.*🌱✨
+
+💫*Maka tugas kita bukan hanya mencari hasil /profit besar hari ini*,
+*tetapi membangun traffic dan jaringan yang besar.*
+👆🏻
+(Kita ikut menjaga ekosistem dan merawatnya )
+
+💫Karena ketika traffic sudah besar,
+monetisasi akan mengikuti dengan sendirinya
+
+💫DARI SITULAH UANG MASUK DAN ITU YG DISEBUT 👉🏿*MONETISASI*
+
+Salam kompak untuk sukses bersama di  shortpro 💪🏻💪🏻💪🏻🚀🚀💥💥
+
+👉Dunia ShortPro :`,
+
+`Apakah bisnis konten drama pendek sedang naik tahun ini?
+
+Jawaban: IYA, sedang mengalami peningkatan besar dan termasuk industri yang berkembang sangat cepat.
+
+1. Tren Global
+- Industri drama pendek (micro drama) tumbuh sangat pesat
+- Pertumbuhan diperkirakan di atas 30% per tahun
+- Nilai industri diprediksi mencapai miliaran dolar dalam beberapa tahun ke depan
+- Ini bukan tren sementara, tapi arah baru industri hiburan digital
+
+2. Platform Besar Ikut Masuk
+- TikTok mulai membuat konten drama sendiri
+- Perusahaan besar seperti Amazon dan Disney juga mulai melirik format ini
+- Ini tanda bahwa pasar dan uang sedang mengalir ke industri ini
+
+3. Data Pengguna
+- Video pendek menjadi mayoritas konsumsi konten internet
+- YouTube Shorts mencapai puluhan miliar views per hari
+- Pengguna lebih suka konten cepat, singkat, dan langsung ke inti
+
+4. Perkembangan di Indonesia
+- Download aplikasi drama pendek meningkat sangat tinggi (ratusan persen)
+- Pasar Indonesia masih dalam tahap berkembang (belum jenuh)
+- Banyak iklan muncul karena pemain baru sedang berebut pasar
+
+5. Alasan Kenapa Meledak
+- Pola konsumsi berubah (orang lebih suka yang cepat)
+- Konten mudah viral
+- Cerita dibuat singkat tapi bikin penasaran (hook kuat)
+- Bisa ditonton kapan saja tanpa komitmen lama
+
+6. Model Bisnis
+- Iklan (ads)
+- Sistem koin untuk membuka episode
+- Traffic dan distribusi konten
+- Sistem support user (bukan hanya kreator yang dapat uang)
+
+7. Hal yang Perlu Diwaspadai
+- Persaingan semakin ketat
+- Banyak platform yang overhype
+- Tidak semua platform bertahan lama
+- Harus benar-benar paham sistem sebelum terjun
+
+Kesimpulan:
+Bisnis drama pendek saat ini sedang naik pesat dan menjadi peluang besar di dunia digital. Namun tetap perlu selektif, memahami sistem, dan tidak hanya ikut tren agar tidak salah langkah.
+
+Yuk Ah Gabung Bersama Shortpro ikut serta membangun ekosistem drama pendek agar bisa menambah penghasilan.
+
+Cukup dengan mulai 50 koin dukung drama saja.
+Peluang penghasilan tambahan setia hari😍😍😍
+👉Cek di sini:`,
+
+`Banyak orang gagal paham soal dunia platform drama pendek.
+
+Dikira cuannya dari “uang member baru buat bayar member lama”…
+Padahal itu asumsi lama yang tidak relevan dengan sistem berbasis traffic dan aktivitas konten digital.
+
+Faktanya:
+Shortpro berjalan dari ekosistem hiburan digital —
+di mana penonton, kreator, dan distribusi konten jadi sumber nilai utama.
+
+Bukan sekadar rekrutmen.
+
+Shortpro juga bukan platform tanpa arah:
+✔️ Ada CEO yang jelas
+✔️ Perusahaan resmi: PT Nextgen Inovasi Digital
+✔️ Kantor pusat & cabang di berbagai kota (Jakarta, Bandung, Sukabumi, Makassar, Salatiga, Surabaya, dll)
+✔️ Komunitas nyata + kopdar di berbagai daerah
+
+Legalitasnya pun bukan abal-abal:
+✔️ Terdaftar di AHU
+✔️ Terpantau Kominfo
+✔️ Sistem pembayaran melalui payment gateway yang diawasi Bank Indonesia
+
+Jadi kalau masih ragu…
+coba cek lagi: ragu karena fakta, atau karena trauma masa lalu?
+
+Karena menyamakan semua bisnis itu sama,
+justru itu yang bikin banyak orang ketinggalan peluang.
+
+Setiap bisnis punya sistem, visi, dan eksekusi yang berbeda.
+
+Jangan menilai sesuatu yang baru,
+dengan kacamata kegagalan yang lama.
+
+👉Cek di sini:`,
+
+`📊 OMSET DRAMA PENDEK DI INDONESIA
+
+💰 Data Saat Ini (2025):
+- Sekitar USD 66 juta
+- ± Rp1,0 – 1,1 triliun per tahun
+
+🌏 Asia Tenggara:
+- Total ± Rp3,1 triliun
+- Indonesia = salah satu kontributor terbesar
+
+📈 Proyeksi (2030):
+- USD 311 juta
+- ± Rp5,1 triliun
+
+🚀 Pertumbuhan:
+- Naik sekitar 5x dalam 5 tahun
+- Growth ±36% per tahun (sangat cepat)
+
+👀 Fakta Penting:
+- Indonesia kuat di jumlah penonton (traffic besar)
+- Termasuk pasar terbesar di Asia Pasifik
+- Tapi monetisasi masih berkembang (belum maksimal)
+
+⚠️ Catatan:
+- Penonton banyak ≠ penghasilan besar
+- Sistem monetisasi masih kalah dari China & Amerika
+
+🧠 Kesimpulan:
+- Sudah masuk industri TRILIUNAN
+- Masih tahap awal (early stage)
+- Potensi sangat besar ke depan
+
+🔥 Insight:
+Indonesia = ladang traffic besar
+👉 Siapa yang bisa mengelola traffic = punya peluang cuan
+
+💡 Edukasi:
+Anda sudah tepat bergabung dengan ShortPro
+Membangun ekosistem traffic & mendukung drama
+
+🎬 Cukup dengan:
+- Dukung drama hanya dengan 50 koin
+- Ikut berperan dalam pertumbuhan konten
+
+💰 Peluang:
+Bisa ikut serta mendapatkan penghasilan tambahan
+dari aktivitas support dalam platform
+👉Cek di sini:`,
+
+`📢 PENJELASAN SEDERHANA SHORTPRO (UNTUK PEMULA)
+
+ShortPro itu ibarat platform nonton drama 🎬 yang pakai sistem “dukungan traffic”. Artinya, kita bantu naikin penonton (view) supaya drama makin ramai & direkomendasikan algoritma 📈
+
+👉 Gampangnya:
+Seperti YouTuber butuh penonton biar dapat uang 💰 Nah di sini, sistem bantu datangkan penonton lewat iklan, dan kita ikut “dukung” proses itu
+
+📌 Peran Kita
+Kita bukan investor ❌
+Kita bantu aktivitas platform (nonton & dukung konten) ✔️
+Sebagai gantinya, kita dapat reward dari sistem 💰
+
+📌 Dari Mana Uangnya?
+Dari ekosistem platform:
+✔️ Iklan digital
+✔️ Pengguna VIP (berbayar)
+✔️ Aktivitas dalam aplikasi
+
+📌 Kenapa Dapat Reward?
+Karena kita ikut bantu traffic (penonton) jadi konten berkembang 🎯
+
+📌 Apakah Ini Pasti Untung?
+Tidak ❌
+Hasil tergantung sistem, traffic & aktivitas ⚙️
+
+📌 Kesimpulan Sederhana
+👉 Ini bukan investasi
+👉 Ini aktivitas bantu platform
+👉 Ada reward, tapi tidak dijamin tetap
+👉 Cocok sebagai tambahan, bukan penghasilan utama
+
+💡 Intinya: kita bantu konten rame ➡️ platform berkembang ➡️ kita dapat bagian reward 🎬💰.
+👉 Cek di sini:`,
+
+`*👩‍🌾 PAHAM SISTEM SHORTPRO*
+          *👉 PASTI NAIK LEVEL*
+
+*✅ NAIK  LEVEL - 3️⃣*
+INCOME Minimal : 3,5 Jt / Bulan
+*👉 WD SETIAP HARI*
+GAJI : 320,000 Setiap Bulan 
+
+*NAIK LEVEL 4️⃣*
+INCOME Minimal : 5 Jt / Bulan
+GAJI : 800,000 Setiap Bulan 
+
+*NAIK LEVEL 5️⃣*
+INCOME Minimal : 25 Jt / Bulan
+GAJI : 4,8 Juta Setiap Bulan 
+
+*NAIK LEVEL 6️⃣*
+INCOME Minimal : 200 Jt / Bulan
+GAJI : 32 Juta Setiap Bulan
+
+*NAIK LEVEL 7️⃣*
+INCOME  :  1,3 Milyar / Bulan 
+GAJI : 160 Juta Setiap Bulan
+
+*Murah Mudah Ya Shortpro*🫣
+*👉 Banyak Belajar Ikuti Mentor Edukasi Di Grup Dan Cs Shortpro*
+
+*👉 MODAL 50 KOIN : 800,000*
+*👉 Di Bayar Maximal 3% / Hari*
+*👉 MODAL DI KEMBALI' KAN*
+
+*📞📞 CHAT WA // Nama anda*
+*Sy Bimbing Cuan Di Shortpro*
+👉cek di sini:`,
+
+`Di ShortPro, kamu tidak hanya menjadi penonton pasif, tapi bagian dari ekosistem yang menghargai interaksi pengguna melalui sistem tugas harian yang sederhana dan mudah dijalankan.
+👉 Mulai sekarang:`,
+
+`Platform ini dibuat untuk orang-orang yang ingin tetap menikmati hiburan digital, tapi juga ingin ada manfaat tambahan dari waktu yang mereka habiskan secara online.
+👉 Daftar hari ini:`,
+
+`ShortPro menjembatani antara kebutuhan hiburan dan keinginan untuk lebih produktif, sehingga kamu tidak perlu memilih salah satu di antaranya.
+👉 Gabung sekarang:`,
+
+`Dengan konsep yang ringan dan tidak membebani, ShortPro memberi peluang bagi siapa saja untuk memulai tanpa rasa tertekan atau kewajiban yang berat.
+👉 Mulai di sini:`,
+
+`Banyak orang ingin memanfaatkan waktu luang secara lebih baik, dan ShortPro menyediakan wadah yang tepat untuk itu dalam bentuk hiburan yang bernilai.
+👉 Daftar sekarang:`,
+
+`Setiap interaksi yang kamu lakukan bukan sekadar respon, tapi bagian dari sistem yang memberi manfaat kembali kepada pengguna aktif.
+👉 Gabung hari ini:`,
+
+`ShortPro menghadirkan pendekatan baru terhadap hiburan digital dengan menambahkan unsur partisipasi dan reward ke dalam pengalaman menonton.
+👉 Mulai sekarang:`,
+
+`Jika kamu mencari platform yang tidak menuntut keahlian khusus tapi tetap memberi peluang, ShortPro menawarkan keseimbangan yang jarang ditemukan.
+👉 Daftar di sini:`,
+
+`ShortPro memberi ruang bagi pengguna untuk menikmati konten sekaligus merasa bahwa waktu mereka tidak terbuang sia-sia.
+👉 Gabung sekarang:`,
+
+`Konsep yang sederhana membuat ShortPro mudah diakses oleh siapa saja, termasuk mereka yang baru pertama kali mencoba peluang digital.
+👉 Mulai hari ini:`,
+
+`Dengan memadukan hiburan dan sistem reward, ShortPro menciptakan pengalaman yang terasa lebih adil dan saling menguntungkan antara platform dan pengguna.
+👉 Daftar sekarang:`,
+
+`ShortPro tidak meminta perubahan besar dalam rutinitasmu, cukup sisipkan sedikit interaksi ke dalam aktivitas yang sudah biasa kamu lakukan.
+👉 Gabung hari ini:`,
+
+`Platform ini membantu mengubah kebiasaan konsumtif menjadi kebiasaan partisipatif yang memberi dampak positif bagi pengguna.
+👉 Mulai sekarang:`,
+
+`ShortPro dirancang agar pengguna merasa nyaman, tidak terbebani, dan tetap bisa menikmati konten tanpa tekanan berlebihan.
+👉 Daftar di sini:`,
+
+`Dengan sistem yang fleksibel, ShortPro memungkinkan kamu mengatur sendiri kapan dan bagaimana kamu ingin berpartisipasi.
+👉 Gabung sekarang:`,
+
+`ShortPro membuka peluang bagi siapa saja untuk memulai dari langkah kecil tanpa harus memahami dunia digital yang rumit.
+👉 Mulai sekarang:`,
+
+`Di tengah arus konten yang begitu cepat, ShortPro menawarkan cara yang lebih tenang dan terstruktur untuk menikmati hiburan sekaligus produktivitas.
+👉 Daftar hari ini:`,
+
+`ShortPro memberi nilai pada partisipasi pengguna, bukan hanya pada jumlah penonton, sehingga interaksi kamu benar-benar berarti.
+👉 Gabung sekarang:`,
+
+`Jika kamu ingin memulai sesuatu yang baru tanpa harus meninggalkan kenyamanan hiburan favoritmu, ShortPro menyediakan jalannya.
+👉 Mulai di sini:`,
+
+`ShortPro mengajak kamu untuk menjadi bagian dari pengalaman digital yang tidak hanya menghibur, tapi juga memberi manfaat tambahan.
+👉 Daftar sekarang:`,
+
+`Nonton drama pendek sekarang bisa jadi reward, cukup komentar 3 kali sehari di ShortPro.
+👉 Daftar sekarang:`,
+
+`Waktu online kamu bisa berubah jadi profit sharing lewat interaksi sederhana di ShortPro.
+👉 Join di sini:`,
+
+`Dari sekadar hiburan, sekarang drama pendek bisa jadi peluang income tambahan.
+👉 Mulai sekarang:`,
+
+`Setiap komentar kamu di ShortPro punya nilai dan bisa menghasilkan reward.
+👉 Daftar di sini:`,
+
+`Tanpa jualan, tanpa ribet, cukup nonton dan komentar untuk dapat hasil.
+👉 Info & daftar:`,
+
+`Side income sekarang bisa sesimpel buka HP dan komentar 3 kali sehari.
+👉 Join sekarang:`,
+
+`Hiburan yang biasanya habiskan waktu, sekarang bisa jadi lebih produktif.
+👉 Mulai di sini:`,
+
+`Kalau kamu suka nonton dan komentar, ShortPro bikin itu bernilai.
+👉 Gabung sekarang:`,
+
+`Streaming drama pendek + profit sharing ada di ShortPro.
+👉 Daftar di sini:`,
+
+`Aktivitas online kamu bisa jadi sumber reward harian.
+👉 Mulai sekarang:`,
+
+`Beberapa menit sehari cukup untuk dapatkan reward dari ShortPro.
+👉 Info & daftar:`,
+
+`Tanpa skill khusus, tanpa modal besar, cukup interaksi natural.
+👉 Join di sini:`,
+
+`🎬 Lagi butuh hiburan ringan?
+Coba deh nonton drama pendek di ShortPro
+Seru, cepat, nggak makan waktu 😌`,
+
+`📱 Scroll terus tapi nggak nemu yang seru?
+Mungkin kamu belum coba ShortPro 😉`,
+
+`🎥 Nonton sebentar, lanjut kerja lagi
+Model hiburan kayak gini sih yang enak 😄
+Ada di ShortPro`,
+
+`😏 Awalnya cuma coba-coba
+Eh keterusan nonton drama pendek tiap hari
+Ternyata ada di ShortPro`,
+
+`🔥 Drama pendek sekarang lagi naik banget
+Kalau belum coba ShortPro, kamu ketinggalan dikit sih 😄`,
+
+`🎬 Nggak perlu nonton lama-lama
+Beberapa menit aja udah dapet feel-nya
+Cobain di ShortPro`,
+
+`📲 Lagi nunggu? Lagi santai?
+Daripada gabut, mending buka ShortPro`,
+
+`👀 Banyak yang diam-diam sudah pakai ini
+Kamu kapan mau coba?
+👉 ShortPro`,
+
+`😄 Hiburan ringan tapi nagih
+Drama pendek emang beda
+Coba aja dulu di ShortPro`,
+
+`🎥 Sekali nonton, biasanya lanjut terus
+Konsepnya simpel tapi bikin betah
+Ada di ShortPro`,
+
+`📱 Kalau kamu suka konten cepat & padat
+Kayaknya ShortPro cocok buat kamu`,
+
+`😉 Nggak harus langsung serius
+Coba aja dulu, siapa tau cocok
+👉 ShortPro`,
+
+`🎬 Hiburan zaman sekarang emang berubah
+Yang cepat, yang praktis
+Makanya banyak yang pindah ke ShortPro`,
+
+`😎 Lagi pengen santai tapi tetap seru?
+Coba buka ShortPro`,
+
+`🔥 Banyak drama viral ternyata ada di sini
+Nggak heran makin ramai
+👉 ShortPro`,
+
+`📲 Kadang yang bikin betah itu yang simpel
+Seperti nonton drama pendek di ShortPro`,
+
+`😄 Iseng buka, eh malah keterusan
+Kayaknya kamu bakal ngalamin juga
+👉 ShortPro`,
+
+`🎥 Bukan cuma hiburan biasa
+Ada hal menarik di dalamnya
+Coba cek ShortPro`,
+
+`👀 Banyak yang belum sadar ini
+Padahal udah mulai ramai
+👉 ShortPro`,
+
+`🔥 Kadang yang lagi naik itu bukan yang paling heboh
+Tapi yang diam-diam dipakai banyak orang
+Seperti ShortPro`,
+
+`🎬 Kadang hiburan terbaik itu yang simpel
+Nggak ribet, nggak lama
+Coba aja ShortPro`,
+
+`😄 Lagi banyak yang pindah ke drama pendek
+Lebih cepat, lebih praktis
+Ada di`,
+
+`📱 Daripada scroll nggak jelas
+Mending nonton yang jelas-jelas seru 😏
+👉`,
+
+`👀 Awalnya cuma lihat-lihat
+Eh malah jadi rutinitas tiap hari 😅
+Di`,
+
+`🎥 Yang pendek justru lebih nagih
+Nggak berasa, tahu-tahu lanjut terus
+👉`,
+
+`😉 Banyak yang belum cerita ke orang lain
+Tapi diam-diam sudah pakai ini
+👉`,
+
+`🔥 Hiburan sekarang bukan soal lama
+Tapi soal menarik atau nggak
+Dan ini… lumayan beda 😏
+👉`,
+
+`📲 Lagi di jalan, lagi santai
+Cuma butuh beberapa menit buat nikmatin
+👉`,
+
+`😄 Kadang yang bikin ketagihan itu bukan film panjang
+Tapi yang pendek tapi kena
+Coba cek`,
+
+`🎬 Kalau kamu tipe yang nggak sabaran
+Ini cocok sih 😄
+👉`,
+
+`👀 Banyak yang awalnya meremehkan
+Tapi setelah coba… beda cerita 😏
+👉`,
+
+`📱 Hiburan cepat itu sekarang lagi dicari
+Dan ini salah satunya
+👉`,
+
+`😎 Nggak semua yang viral itu bertahan
+Tapi yang ini mulai banyak yang pakai
+👉`,
+
+`🎥 Sekali coba biasanya langsung ngerti
+Kenapa banyak yang betah
+👉`,
+
+`🔥 Kadang yang menarik itu yang belum banyak diketahui
+Sekarang masih di fase itu 😏
+👉`,
+
+`📲 Lagi nunggu? lagi bosan?
+Ini bisa jadi teman sebentar yang seru
+👉`,
+
+`😄 Nggak perlu waktu lama buat menikmati
+Beberapa menit aja cukup
+👉`,
+
+`👀 Banyak yang belum sadar potensinya
+Padahal sudah mulai ramai
+👉`,
+
+`🎬 Kalau kamu suka sesuatu yang beda
+Ini worth dicoba sih
+👉`,
+
+`🔥 Bukan sekadar hiburan biasa
+Ada sesuatu yang bikin orang balik lagi
+👉`,
+
+`📱 Scroll boleh, tapi sesekali nonton yang niat 😄
+👉`,
+
+`😏 Yang ngerti duluan biasanya lebih untung
+Sisanya… baru nyusul
+👉`,
+
+`🎥 Kadang yang sederhana justru paling efektif
+Seperti konsep ini
+👉`,
+
+`👀 Banyak yang sudah mulai rutin buka ini tiap hari
+Kamu belum? 😄
+👉`,
+
+`🔥 Hiburan yang nggak makan waktu panjang
+Ini yang lagi dicari sekarang
+👉`,
+
+`📲 Tinggal buka, pilih, nonton
+Sesimpel itu
+👉`,
+
+`😄 Kadang penasaran itu harus diturutin
+Daripada mikir terus 😏
+👉`,
+
+`🎬 Nggak semua hiburan harus panjang
+Yang penting berkesan
+👉`,
+
+`👀 Banyak yang diam-diam sudah menikmati ini
+Tanpa banyak ngomong 😄
+👉`,
+
+`🔥 Kadang yang kecil itu justru besar efeknya
+Seperti konsep di sini
+👉`,
+
+`Kalau kamu cuma penasaran, nggak perlu mikir lama sih 😄
+Langsung aja lihat sendiri gimana platformnya bekerja
+👉 `,
+
+`Aku nggak maksa kamu join kok
+Tapi kalau kamu tipe yang nggak mau ketinggalan duluan… kamu tahu harus klik yang mana 😉
+👉 `,
+
+`Biasanya orang yang klik duluan itu yang paling cepat ngerti
+Sisanya… cuma nunggu cerita dari orang lain 😏
+👉 `,
+
+`Nggak harus langsung serius
+Masuk aja dulu, lihat-lihat
+Kalau cocok lanjut, kalau nggak ya santai 👍
+👉`,
+
+`Daripada cuma dengar dari orang lain
+Mending kamu lihat sendiri dari dalamnya
+Baru nanti kamu bisa nilai 😄
+👉`,
+
+`Kadang yang bikin beda itu cuma satu klik kecil
+Sisanya tinggal keputusan kamu 😉
+👉`,
+
+`Kalau kamu tipe yang suka coba dulu baru percaya
+Ini momen yang pas sih 😏
+👉`,
+
+`Aku cuma kasih pintunya
+Masuk atau nggak, itu keputusan kamu 😄
+👉`,
+
+`Jujur aja, kebanyakan orang nyesel bukan karena coba
+Tapi karena telat coba 😅
+👉`,
+
+`Santai aja, nggak ada yang hilang kalau kamu cek dulu
+Tapi bisa jadi kamu nemu sesuatu yang worth 😉
+👉`
+];
+
+  const radioContainer = document.getElementById("radioContainer");
+
+  // Generate radio buttons
+  texts.forEach((text) => {
+    const label = document.createElement("label");
+    label.innerHTML = `
+      <input type="radio" name="textOption" value="${text}" onchange="generateFromRadio(this.value)">
+      ${text}
+    `;
+    radioContainer.appendChild(label);
+  });
+
+  function generateRandom() {
+    const url = document.getElementById("urlInput").value.trim();
+    if (!url) {
+      alert("Masukkan URL dulu!");
+      return;
+    }
+
+    const randomText = texts[Math.floor(Math.random() * texts.length)];
+    showResult(randomText, url);
+  }
+
+  function generateFromRadio(selectedText) {
+    const url = document.getElementById("urlInput").value.trim();
+    if (!url) {
+      alert("Masukkan URL dulu!");
+      return;
+    }
+
+    showResult(selectedText, url);
+  }
+
+  function showResult(text, url) {
+    const finalText = text + " " + url;
+    document.getElementById("resultText").value = finalText;
+    document.getElementById("resultBox").style.display = "block";
+  }
+
+  function copyText() {
+    const textarea = document.getElementById("resultText");
+    textarea.select();
+    textarea.setSelectionRange(0, 99999);
+
+    document.execCommand("copy");
+
+    alert("Text berhasil di-copy!");
+  }
+</script>
+
+<p>
+<p>
+<p>
+<p>
+<p>
+<p>
+<center>
+<div style="position:relative; display:inline-block; margin:10px 0;">
+  
+  <a href="https://rontob.github.io/kalimat-promosi-generator/sawertrustpartner.jpg" target="_blank">
+    <img 
+      src="https://rontob.github.io/kalimat-promosi-generator/sawertrustpartner.jpg" 
+      alt="Partner"
+      style="width:120px; border-radius:8px; display:block;"
+    >
+    
+    <!-- Overlay text -->
+    <span style="
+      position:absolute;
+      top:50%;
+      left:50%;
+      transform:translate(-50%, -50%);
+      color:white;
+      font-size:12px;
+      font-weight:bold;
+      background:rgba(0,0,0,0.5);
+      padding:4px 8px;
+      border-radius:6px;
+    ">
+      ☕ buat beli kopi
+    </span>
+
+  </a>
+
+</div>
+  <p><p>
+    <div id="sfc6szr1h8crnkm8qymfpht1qrc5pdh99ah"></div><script type="text/javascript" src="https://counter1.optistats.ovh/private/counter.js?c=6szr1h8crnkm8qymfpht1qrc5pdh99ah&down=async" async></script><noscript><a href="https://www.freecounterstat.com" title="hit counter"><img src="https://counter1.optistats.ovh/private/freecounterstat.php?c=6szr1h8crnkm8qymfpht1qrc5pdh99ah" border="0" title="hit counter" alt="hit counter"></a></noscript>
+</center>
+</body>
+</html>
